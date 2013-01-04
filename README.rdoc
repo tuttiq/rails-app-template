@@ -21,9 +21,8 @@ Specs:
 - Scripts em CoffeeScript
 
 Dependêcias:
-- Ruby 1.9.2 ou superior
+- Ambiente: http://gist.github.com/2376711
 - MySQL Server com user root sem senha
-- Bundler
 
 Instalação:
 - Git clone ou download e extract do zip da aplicação
