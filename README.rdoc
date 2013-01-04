@@ -2,36 +2,44 @@ Template for basic rails application (some hard-coded text in Portuguese-BR)
 ----------------------------------------------------------------------------
 Template para uma aplicação básica em Rails (alguns textos estão hard-coded)
 
-Funcionalidades:
-Tela de Login + Esqueci minha senha (recuperação de senha via link com token por e-mail)
-Dashboard + barra superior com Logout
-Menu esquerdo personalizdo por perfil
-Cadastro de usuários: Admin, Tipo 1 e Tipo 2
-Cadastro de registros
-Job de criação do Admin inicial
+** Funcionalidades **
+- Tela de Login + Esqueci minha senha (recuperação de senha via link com token por e-mail)
+- Dashboard + barra superior com Logout
+- Menu esquerdo personalizdo por perfil
+- Cadastro de usuários: Admin, Tipo 1 e Tipo 2
+- Cadastro de registros
+- Job de criação do Admin inicial
 
-Specs:
-CSS by Twitter Bootstrap
-Banco MySQL
-Users definidos by Sorcery
-Roles definidos em User.type
-Permissões definidas com CanCan
-Debug by Pry
-Páginas em Haml
-Scripts em CoffeeScript
+** Specs **
+- CSS by Twitter Bootstrap
+- Banco MySQL
+- Users definidos by Sorcery
+- Roles definidos em User.type
+- Permissões definidas com CanCan
+- Debug by Pry
+- Páginas em Haml
+- Scripts em CoffeeScript
 
-Dependêcias:
-Ruby 1.9.2 ou superior
-MySQL Server com user root sem senha
-Bundler
+** Dependêcias **
+- Ruby 1.9.2 ou superior
+- MySQL Server com user root sem senha
+- Bundler
 
-Instalação:
-Git clone ou download e extract do zip da aplicação
+** Instalação **
+- Git clone ou download e extract do zip da aplicação
+
 $ cd rails-app-template
+
 $ bundle install
+
 $ rake db:create
+
 $ rake db:migrate
+
 $ rake create_admin
-(preenche as informações do admin)
+
+- Preencher as informações do admin
+
 $ rails s
-Browser: http://localhost:3000
+
+- Browser: http://localhost:3000
