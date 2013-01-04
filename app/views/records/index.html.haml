@@ -1,0 +1,36 @@
+%h1
+  Registros
+%br
+
+=form_for(Record.new, :url => search_records_path, :html => { :class => 'search form-inline' }) do |f|
+  =f.text_field :name, :placeholder => "Buscar por nome"
+
+%br
+
+-if can? :manage, Record
+  %p
+    =link_to 'Adicionar novo', new_record_path, :class => :btn
+
+%table.table.table-striped.table-bordered.table-condensed
+  %thead
+    %tr
+      %th
+        Nome
+      %th
+        Descrição
+      -if can? :manage, Record
+        %th
+          Ações
+
+  %tbody
+    - @records.each do |record|
+      %tr
+        %td
+          =link_to record.name, record_path(record)
+        %td
+          =record.comments
+        -if can? :manage, Record
+          %td
+            =link_to 'Editar', edit_record_path(record)
+            |
+            =link_to 'Remover', record_path(record), :method => :delete, :confirm => 'Tem certeza que deseja excluir?'

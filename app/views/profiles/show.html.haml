@@ -1,0 +1,30 @@
+%h1
+  =@user.name
+%br
+%p
+  Nome de usuário:
+  =@user.username
+
+%p
+  E-mail:
+  =@user.email
+
+-unless @user.is_a? Admin
+  %p
+    CPF:
+    =@user.cpf
+
+  %p
+    RG:
+    =@user.rg
+
+  %p
+    Data de nascimento:
+    = l @user.birthdate
+%p
+  =link_to "Resetar senha", reset_password_profile_path, :class => :btn
+
+%br
+=link_to "Editar", edit_profile_path
+|
+=link_to "Voltar", root_path

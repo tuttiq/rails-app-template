@@ -1,0 +1,20 @@
+%ul.nav
+  %li
+    ="Bem vindo, " + current_user.name.split(" ").first
+  %li
+    ="Seu perfil: " + current_user.type_name
+  %br
+  %li
+    =link_to 'Inicio', root_path
+  -if can? :read, Admin
+    %li
+      =link_to 'Administradores', admins_path
+  -if can? :read, TypeOneUser
+    %li
+      =link_to 'Usuarios Tipo 1', type_one_users_path
+  -if can? :read, TypeTwoUser
+    %li
+      =link_to 'Usuarios Tipo 2', type_two_users_path
+  -if can? :read, Record
+    %li
+      =link_to 'Registros', records_path

@@ -1,0 +1,28 @@
+%h1
+  =@type_two_user.name
+%br
+%p
+  Nome de usuário:
+  =@type_two_user.username
+
+%p
+  E-mail:
+  =@type_two_user.email
+
+%p
+  CPF:
+  =@type_two_user.cpf
+
+%p
+  RG:
+  =@type_two_user.rg
+
+%p
+  Data de nascimento:
+  = l @type_two_user.birthdate
+
+%br
+-if can? :manage, TypeTwoUser
+  =link_to "Editar", edit_type_two_user_path(@type_two_user)
+  |
+=link_to "Voltar", type_two_users_path

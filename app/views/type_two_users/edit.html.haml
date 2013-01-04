@@ -1,0 +1,13 @@
+=simple_form_for(@type_two_user, :html => { :class => 'form-horizontal' }) do |f|
+  %fieldset
+    %legend
+      Editar Usuário Tipo 2
+    =f.input :name
+    =f.input :email
+    =f.input :username, :disabled => true
+    =f.input :cpf
+    =f.input :rg
+    =f.input :birthdate, :start_year => Date.today.year - 80, :end_year => Date.today.year - 15, :input_html => {:class => 'input-small'}
+    %div.form-actions
+      =f.button :submit, "Salvar"
+      =link_to "Cancelar", type_two_users_path, :class => :btn

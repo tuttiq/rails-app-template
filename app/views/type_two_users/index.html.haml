@@ -1,0 +1,35 @@
+%h1
+  Usuários Tipo 2
+%br
+
+-if can? :manage, TypeTwoUser
+  %p
+    =link_to 'Adicionar novo', new_type_two_user_path, :class => :btn
+
+%table.table.table-striped.table-bordered.table-condensed
+  %thead
+    %tr
+      %th
+        Nome
+      %th
+        Nome de usuário
+      %th
+        E-mail
+      -if can? :manage, TypeTwoUser
+        %th
+          Ações
+
+  %tbody
+    - @type_two_users.each do |type_two_user|
+      %tr
+        %td
+          =link_to type_two_user.name, type_two_user_path(type_two_user)
+        %td
+          =type_two_user.username
+        %td
+          =type_two_user.email
+        -if can? :manage, TypeTwoUser
+          %td
+            =link_to 'Editar', edit_type_two_user_path(type_two_user)
+            |
+            =link_to 'Remover', type_two_user_path(type_two_user), :method => :delete, :confirm => 'Tem certeza que deseja excluir?'
