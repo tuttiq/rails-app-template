@@ -2,7 +2,7 @@ Template for basic rails application (some hard-coded text in Portuguese-BR)
 ----------------------------------------------------------------------------
 Template para uma aplicação básica em Rails (alguns textos estão hard-coded)
 
-** Funcionalidades **
+Funcionalidades:
 - Tela de Login + Esqueci minha senha (recuperação de senha via link com token por e-mail)
 - Dashboard + barra superior com Logout
 - Menu esquerdo personalizdo por perfil
@@ -10,7 +10,7 @@ Template para uma aplicação básica em Rails (alguns textos estão hard-coded)
 - Cadastro de registros
 - Job de criação do Admin inicial
 
-** Specs **
+Specs:
 - CSS by Twitter Bootstrap
 - Banco MySQL
 - Users definidos by Sorcery
@@ -20,26 +20,26 @@ Template para uma aplicação básica em Rails (alguns textos estão hard-coded)
 - Páginas em Haml
 - Scripts em CoffeeScript
 
-** Dependêcias **
+Dependêcias:
 - Ruby 1.9.2 ou superior
 - MySQL Server com user root sem senha
 - Bundler
 
-** Instalação **
+Instalação:
 - Git clone ou download e extract do zip da aplicação
 
-$ cd rails-app-template
+$cd rails-app-template
 
-$ bundle install
+$bundle install
 
-$ rake db:create
+$rake db:create
 
-$ rake db:migrate
+$rake db:migrate
 
-$ rake create_admin
+$rake create_admin
 
 - Preencher as informações do admin
 
-$ rails s
+$rails s
 
 - Browser: http://localhost:3000
