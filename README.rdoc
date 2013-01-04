@@ -27,19 +27,11 @@ Dependêcias:
 
 Instalação:
 - Git clone ou download e extract do zip da aplicação
-
-$cd rails-app-template
-
-$bundle install
-
-$rake db:create
-
-$rake db:migrate
-
-$rake create_admin
-
+- $ cd rails-app-template
+- $ bundle install
+- $ rake db:create
+- $ rake db:migrate
+- $ rake create_admin
 - Preencher as informações do admin
-
-$rails s
-
+- $ rails s
 - Browser: http://localhost:3000
