@@ -1,36 +1,34 @@
-Template for basic rails application (some hard-coded text in Portuguese-BR)
-----------------------------------------------------------------------------
-Template para uma aplicação básica em Rails (alguns textos estão hard-coded)
+Template for basic rails application (some hard-coded text in Portuguese-BR #shameOnMe)
 
-Funcionalidades:
-- Tela de Login + Esqueci minha senha (recuperação de senha via link com token por e-mail)
-- Dashboard + barra superior com Logout
-- Menu esquerdo personalizdo por perfil
-- Cadastro de usuários: Admin, Tipo 1 e Tipo 2
-- Cadastro de registros
-- Job de criação do Admin inicial
+Features:
+- Login page + Forgot my password (password reset by sending an email with a reset url)
+- Dashboard + top menu with a Logout button
+- Left side menu, customized depending on the type of user
+- CRUD operations for 3 types of Users: Admin, TypeOneUser and TypeTwoUser
+- CRUD operations for Records (generic model)
+- Rake task to create the initial Admin
 
-Specs:
+Tools:
 - CSS by Twitter Bootstrap
-- Banco MySQL
-- Users definidos by Sorcery
-- Roles definidos em User.type
-- Permissões definidas com CanCan
-- Debug by Pry
-- Páginas em Haml
-- Scripts em CoffeeScript
+- MySQL database
+- User authentication by Sorcery
+- User types defined by STI (User.type == SubClassName)
+- Authorization defined by CanCan
+- Debug with Pry
+- Haml for writing markup
+- CoffeeScript for scripts
 
-Dependêcias:
-- Ambiente: http://gist.github.com/2376711
-- MySQL Server com user root sem senha
+Dependencies:
+- Environment setup: http://gist.github.com/2376711
+- MySQL Server (root user with no password)
 
-Instalação:
-- Git clone ou download e extract do zip da aplicação
+Instalation:
+- git clone or download and extract zip of this repo
 - $ cd rails-app-template
 - $ bundle install
 - $ rake db:create
 - $ rake db:migrate
 - $ rake create_admin
-- Preencher as informações do admin
+- Fill in admin info
 - $ rails s
-- Browser: http://localhost:3000
+- On your browser: http://localhost:3000
