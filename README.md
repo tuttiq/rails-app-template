@@ -1,4 +1,6 @@
-Template for basic rails application (some hard-coded text in Portuguese-BR #shameOnMe)
+# Rails app template
+
+Boilerplate for a rails application with some basic features (and some hard-coded strings in PT-BR lol #shameOnMe)
 
 Features:
 - Login page + Forgot my password (password reset by sending an email with a reset url)
@@ -24,11 +26,10 @@ Dependencies:
 
 Instalation:
 - git clone or download and extract zip of this repo
-- $ cd rails-app-template
-- $ bundle install
-- $ rake db:create
-- $ rake db:migrate
-- $ rake create_admin
+- `$ cd rails-app-template`
+- `$ bundle install`
+- `$ rake db:create db:migrate`
+- `$ rake create_admin`
 - Fill in admin info
-- $ rails s
+- `$ rails s`
 - On your browser: http://localhost:3000
